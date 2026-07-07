@@ -1,0 +1,28 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+
+# SSH Keys
+*.pem
+*.key
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
