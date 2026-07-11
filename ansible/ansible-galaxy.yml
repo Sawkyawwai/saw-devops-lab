@@ -1,0 +1,11 @@
+---
+- name: Enterprise DevOps Configuration
+  hosts: web
+  become: true
+
+  roles:
+    - nginx
+    - common
+    - docker
+    - java
+    - jenkins

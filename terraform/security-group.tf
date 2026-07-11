@@ -30,6 +30,20 @@ resource "aws_security_group" "ec2" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "Jenkins"
+
+    from_port = 8080
+
+    to_port = 8080
+
+    protocol = "tcp"
+
+    cidr_blocks = [
+      "115.66.169.99/32"
+    ]
+  }
+
   egress {
 
     from_port = 0
@@ -45,3 +59,5 @@ resource "aws_security_group" "ec2" {
     Name = "devops-lab-sg"
   }
 }
+
+

@@ -1,0 +1,13 @@
+---
+# tasks file for roles/common
+
+- name: Install common packages
+  ansible.builtin.apt:
+    name:
+      - curl
+      - wget
+      - git
+      - tree
+      - unzip
+    state: present
+    update_cache: true

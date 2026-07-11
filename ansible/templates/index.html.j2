@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>{{ company_name }}</title>
+
+<style>
+
+body {
+
+background-color:#1d3557;
+
+color:white;
+
+font-family:Arial;
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+.card{
+
+background:#457b9d;
+
+padding:30px;
+
+border-radius:15px;
+
+width:700px;
+
+margin:auto;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>{{ welcome_message }}</h1>
+
+<hr>
+
+<h2>{{ company_name }}</h2>
+
+<p><strong>Environment:</strong> {{ environment }}</p>
+
+<p><strong>Owner:</strong> {{ owner }}</p>
+
+<p><strong>Course:</strong> {{ course }}</p>
+
+<p>This page was deployed automatically using Ansible.</p>
+
+</div>
+
+</body>
+
+</html>

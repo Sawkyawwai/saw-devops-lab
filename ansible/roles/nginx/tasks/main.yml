@@ -1,0 +1,26 @@
+---
+# tasks file for roles/nginx
+
+- name: Install nginx
+  ansible.builtin.apt:
+    name: nginx
+    state: present
+    update_cache: true
+
+- name: Enable nginx
+  ansible.builtin.systemd:
+    name: nginx
+    enabled: true
+
+- name: Start nginx
+  ansible.builtin.systemd:
+    name: nginx
+    state: started
+
+- name: Deploy website
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: "0644"

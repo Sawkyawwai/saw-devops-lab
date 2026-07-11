@@ -1,0 +1,13 @@
+---
+
+company_name: "Saw DevOps Lab"
+
+environment: "Ansible-Galaxy"
+
+web_port: 80
+
+owner: "Saw Kyaw Naing Wai"
+
+welcome_message: "Welcome to Galaxy role testing lab"
+
+course: "Terraform + Ansible + Jenkins + AWS"

@@ -1,0 +1,31 @@
+---
+- name: Configure Web Server
+  hosts: web
+  become: true
+
+  tasks:
+
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Upgrade installed packages
+      ansible.builtin.apt:
+        upgrade: dist
+
+    - name: Install required packages
+      ansible.builtin.apt:
+        name:
+          - git
+          - curl
+          - wget
+          - tree
+          - nginx
+        state: present
+
+    - name: Ensure nginx is enabled
+      ansible.builtin.systemd:
+        name: nginx
+        enabled: true
+        state: started
