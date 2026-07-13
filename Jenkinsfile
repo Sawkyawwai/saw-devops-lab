@@ -5,43 +5,33 @@ pipeline {
     stages {
 
         stage('Checkout') {
-
             steps {
-
-                echo 'Repository checked out'
-
+                echo 'Repository checkout completed.'
             }
-
         }
 
-        stage('Build') {
-
+        stage('Environment') {
             steps {
-
-                sh 'echo Building Project'
-
+                sh '''
+                echo "===== System Information ====="
+                hostname
+                whoami
+                pwd
+                uname -a
+                git --version
+                java -version
+                docker --version
+                '''
             }
-
         }
 
-        stage('Test') {
-
+        stage('List Repository') {
             steps {
-
-                sh 'echo Running Tests'
-
+                sh '''
+                echo "===== Repository Contents ====="
+                ls -lah
+                '''
             }
-
-        }
-
-        stage('Deploy') {
-
-            steps {
-
-                sh 'echo Deploying Application'
-
-            }
-
         }
 
     }
