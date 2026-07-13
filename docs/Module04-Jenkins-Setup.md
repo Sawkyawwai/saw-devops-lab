@@ -58,6 +58,9 @@ Lab step
 11. Update the Jenkinsfile on laptop.
 12. Push the changes.
 13. Build again and verify the updated output. ## Check In Screenshot
+14. After that we add webhook in both github and jenkins
+
+
 
 
 Jenkins file sample
@@ -102,3 +105,7 @@ pipeline {
     }
 
 }
+
+
+
+----------------------------------------------
